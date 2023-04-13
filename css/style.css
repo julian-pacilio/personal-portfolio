@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    height: 80px;
+    background-color: teal;
+    width: 100%;
+}
+
+#logo {
+    display: block;
+    background-image: url("../assets/Sin título.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60px;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+}
+
+nav ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-bar ul li {
+    margin: auto 1.5em 0;
+}
+
+/* Sections */
+
+section {
+    padding: 2em 0;
+}
+
+article {
+    margin: 0 1.2em;
+}
+
+/* General configurations */
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+main {
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+footer {
+    display: flex;
+    background-color: teal;
+    justify-content: center;
+}
+
+footer p {
+    margin: 1em 0;
+}
