@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* #292a2f Main gray */
+/* #393b42 Secondary gray */
+/* #fecb00 Main yellow  */
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -10,6 +14,10 @@
     line-height: 1.4em;
 }
 
+body {
+    background-color: #292a2f;
+}
+
 /* Navigation */
 nav {
     display: flex;
@@ -17,13 +25,12 @@ nav {
     align-items: center;
     padding: 1.5em;
     height: 80px;
-    background-color: teal;
     width: 100%;
 }
 
 #logo {
     display: block;
-    background-image: url("../assets/Sin título.jpg");
+    background-image: url("../assets/logo-portfolio.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60px;
@@ -44,10 +51,57 @@ nav ul {
     margin: auto 1.5em 0;
 }
 
+/* Banner */
+
+#banner {
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#banner > div {
+    display: flex;
+    align-items: center;
+}
+
+#desc p:nth-child(odd){
+    color: white;
+}
+
+#desc p:nth-child(2){
+    color: #fecb00;
+    font-size: 4em;
+}
+
+#desc p:nth-child(3){
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#photo {
+    background-image: url("../assets/pacilio-julian.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 800px;
+}
+
 /* Sections */
+
+h2 {
+    font-weight: bold;
+    color: #fecb00;
+    text-align: center;
+}
 
 section {
     padding: 2em 0;
+}
+
+#sc-1, #sc-3, #sc-5 {
+    background-color: #393b42;
 }
 
 article {
@@ -57,18 +111,16 @@ article {
 /* General configurations */
 
 a {
-    text-decoration: none !important;
-    color: black !important;
+    text-decoration: none;
+    color: black;
 }
 
 main {
-    margin: 2em auto;
-    max-width: 1200px;
+    margin: auto;
 }
 
 footer {
     display: flex;
-    background-color: teal;
     justify-content: center;
 }
 
