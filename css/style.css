@@ -11,22 +11,47 @@
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    line-height: 1.4em;
+    overflow-x: hidden;
+}
+
+/* General configurations */
+
+main {
+    margin: auto;
+}
+
+footer p {
+    text-align: center;
+    margin: 1em 0;
+}
+
+footer :first-child {
+    color: #fecb00;
+    font-weight: bold;
+}
+
+footer :last-child {
+    color: white;
 }
 
 body {
     background-color: #292a2f;
 }
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5em;
-    height: 80px;
-    width: 100%;
+p {
+    line-height: 1.4em;
 }
+
+/* Nav bar */
+nav {
+    background-color: #292a2f;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,20%), 0 6px 20px 0 rgba(0,0,0,20%);
+}
+/*
+.navbar-nav {
+    min-height: 100vh;
+}
+*/
 
 #logo {
     display: block;
@@ -34,27 +59,36 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 60px;
-    margin: 10px;
     width: 60px;
     height: 60px;
     font-size: 0;
 }
 
-nav ul {
+.menu {
     display: flex;
-    width: 100%;
-    list-style: none;
-    margin: 0;
+    flex-direction: column;
+    width: 3em;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    gap: .65rem;
 }
 
-.nav-bar ul li {
-    margin: auto 1.5em 0;
+.menu > div {
+    background: #fecb00;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
 }
 
 /* Banner */
 
 #banner {
-    height: calc(100vh - 80px);
+    height: calc(100vh);
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -62,7 +96,21 @@ nav ul {
 
 #banner > div {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+#desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 1.2em;
+}
+
+#desc p {
+    line-height: 1.4em;
+    margin-bottom: 0.2em;
 }
 
 #desc p:nth-child(odd){
@@ -79,51 +127,165 @@ nav ul {
     font-weight: bold;
 }
 
+#desc:last-child div{
+    margin-top: 0.2em;
+}
+
+#desc div {
+    padding-top: 1em;
+    width: 180px;
+}
+
+#desc div:last-child a{
+    display: block;
+    font-weight: bold;
+    border: 1px solid #fecb00;
+    padding: .6em;
+    text-align: center;
+}
+
 #photo {
     background-image: url("../assets/pacilio-julian.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 800px;
-    height: 800px;
+    width: 425px;
+    height: 425px;
 }
 
-/* Sections */
+/* Section - ABOUT */
 
 h2 {
     font-weight: bold;
     color: #fecb00;
     text-align: center;
-}
-
-section {
-    padding: 2em 0;
+    margin-bottom: 1em ;
 }
 
 #sc-1, #sc-3, #sc-5 {
     background-color: #393b42;
 }
 
+section {
+    width: 100%;
+}
+
 article {
-    margin: 0 1.2em;
+    margin: 3em auto;
+    color: white;
+    min-width: 320px;
+    max-width: 425px;
 }
 
-/* General configurations */
-
-a {
-    text-decoration: none;
-    color: black;
+article p {
+    margin: 1.25em;
 }
 
-main {
-    margin: auto;
+.button  {
+    margin: 2em auto 0;
+    display: block;
+    font-weight: bold;
+    color: #fecb00;
+    background: transparent;
+    border: 1px solid #fecb00;
+    padding: .6em;
+    text-align: center;
 }
 
-footer {
-    display: flex;
+/* Section - SKILLS / PROJECTS */
+
+.wrapper-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 80px);
+    grid-gap: 2em;
     justify-content: center;
 }
 
-footer p {
-    margin: 1em 0;
+.wrapper-projects {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    grid-gap: 2em;
+    justify-content: center;
 }
+
+.line {
+    background-color: #fecb00;
+    height: 1.02em;
+    z-index: 1;
+}
+
+.skills img, .project img {
+    width: 100%;
+}
+
+.skills {
+    width: 80px;
+    height: 80px;
+}
+
+/* CONTACT */
+
+form:first-child {
+    font-size: 1em;
+}
+
+#form{
+    max-width: 320px;
+    margin: auto;
+}
+
+form {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center ;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form button {
+    margin: 2em auto 0;
+    display: block;
+    font-weight: bold;
+    color: #292a2f;
+    background-color: #fecb00;
+    border: 0;
+    padding: 0.6em;
+    text-align: center;
+}
+
+/* SOCIAL MEDIA */
+
+.wrapper-media {
+    display: grid;
+    grid-template-columns: repeat(3, 102px);
+    grid-gap: 2em;
+    justify-content: center;
+}
+
+.ln::before {
+    content: "";
+    background-image: url(../assets/JS.JPG);
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: auto;
+}
+
+.gh::before {
+    content: "";
+    background-image: url(../assets/JS.JPG);
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: auto;
+}
+
+.gm::before {
+    content: "";
+    background-image: url(../assets/JS.JPG);
+    display: block;
+    height: 60px;
+    width: 60px;
+    margin: auto;
+}
+
