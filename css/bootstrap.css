@@ -63,49 +63,6 @@ hr:not([size]) {
   height: 1px;
 }
 
-h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
-}
-@media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 2.5rem;
-  }
-}
-
-h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
-}
-@media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 2rem;
-  }
-}
-
-h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
-}
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.75rem;
-  }
-}
-
-h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
-}
-@media (min-width: 1200px) {
-  h4, .h4 {
-    font-size: 1.5rem;
-  }
-}
-
-h5, .h5 {
-  font-size: 1.25rem;
-}
-
-h6, .h6 {
-  font-size: 1rem;
-}
 /*
 p {
   margin-top: 0;
@@ -191,7 +148,7 @@ sup {
 
 a {
   text-decoration: none;
-  color: #fecb00;
+  color: #46ceca;;
 }
 
 a:hover {
@@ -2149,7 +2106,7 @@ progress {
   color: white;
   background-color: transparent;
   background-clip: padding-box;
-  border: 1px solid  #fecb00;
+  border: 1px solid  #46ceca;;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3828,7 +3785,8 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #fecb00;
+  color: white;
+  font-weight: bolder;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -3842,6 +3800,10 @@ textarea.form-control-lg {
   color: #0a58ca;
 }
 */
+
+.nav-link span {
+  color: #46ceca
+}
 
 .nav-link.disabled {
   color: #6c757d;
