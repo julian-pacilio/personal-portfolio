@@ -3,7 +3,6 @@
 /* #292a2f Main gray */
 /* color: #393b42; */
 /* #fecb00 Main yellow  */
-
 /* color: #46ceca; */
 
 * {
@@ -76,11 +75,15 @@ article p {
 
 article {
     /*¨margin: calc(3em + 60px) auto;*/
-    margin: 60px auto; 
+    margin: 100px auto; 
     color: white;
     min-width: 320px;
     max-width: 425px;
     text-align: left;
+}
+
+#social article {
+    margin: 0  auto 100px; 
 }
 
 /* Nav bar */
@@ -198,6 +201,8 @@ nav {
     background-size: cover;
     width: 425px;
     height: 425px;
+    filter: drop-shadow(0px 0px 20px#46ceca);
+    /* drop-shadow(offset-x offset-y blur-radius color)*/
 }
 
 /* Section - ABOUT */
@@ -222,7 +227,7 @@ nav {
 
 .wrapper-skills {
     display: grid;
-    grid-template-columns: repeat(2, 80px);
+    grid-template-columns: repeat(2, 100px);
     grid-gap: 2em;
     justify-content: center;
 }
@@ -245,13 +250,88 @@ nav {
 background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(57,59,66,1) 100%);
 }
 
-.skills img, .project img {
+.project img {
     width: 100%;
 }
 
-.skills {
-    width: 80px;
-    height: 80px;
+div[title="ai"]::before {
+    content: "";
+    background-image: url(../assets/illustrator-logo.png);
+    display: block;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+div[title="ps"]::before {
+    content: "";
+    background-image: url(../assets/photoshop-logo.png);
+    display: block;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+div[title="bt"]::before {
+    content: "";
+    background-image: url(../assets/bootstrap-logo.png);
+    display: block;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+div[title="git"]::before {
+    content: "";
+    background-image: url(../assets/git-logo.png);
+    display: block;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+div[title="ms"]::before {
+    content: "";
+    background-image: url(../assets/mysql-logo.png);
+    display: block;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+div[title="la"]::before {
+    content: "";
+    background-image: url(../assets/laravel-logo.png);
+    display: block;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+div[title="vue"]::before {
+    content: "";
+    background-image: url(../assets/vue-logo.png);
+    display: block;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+div[title="rt"]::before {
+    content: "";
+    background-image: url(../assets/react-logo.png);
+    display: block;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    margin: auto;
 }
 
 /* CONTACT */
@@ -299,35 +379,37 @@ form button {
     padding: 0;
 }
 
-.ln::before {
-    content: "";
+a[title="linkedin"] {
+    display: block;
     background-image: url(../assets/linkedin-logo.png);
-    display: block;
-    background-size: contain;
-    height: 45px;
-    width: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60px;
+    height: 60px;
+    width: 60px;
     margin: auto;
 }
 
-.gh::before {
-    content: "";
+a[title="github"] {
+    display: block;
     background-image: url(../assets/github-logo.png);
-    display: block;
-    background-size: contain;
-    height: 45px;
-    width: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60px;
+    height: 60px;
+    width: 60px;
     margin: auto;
 }
 
-.be::before {
-    content: "";
+a[title="behance"] {
+    display: block;
     background-image: url(../assets/behance-logo.png);
-    display: block;
-    background-size: contain;
-    height: 45px;
-    width: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60px;
+    height: 60px;
+    width: 60px;
     margin: auto;
 }
-
 
 /** Media Queries */
