@@ -83,7 +83,7 @@ article {
 }
 
 #social article {
-    margin: 0  auto 100px; 
+    margin: 0 auto 100px;
 }
 
 /* Nav bar */
@@ -91,11 +91,6 @@ nav {
     background-color: black;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,20%), 0 6px 20px 0 rgba(0,0,0,20%);
 }
-/*
-.navbar-nav {
-    min-height: 100vh;
-}
-*/
 
 #logo {
     display: block;
@@ -131,11 +126,16 @@ nav {
 
 /* Banner */
 
+.hero {
+    height: 100vh;
+}
+
 #banner {
-    height: calc(100vh);
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    position: absolute;
+    top: 25vh;
 }
 
 #banner > div {
@@ -149,7 +149,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 0 1.2em;
+    padding: 0 1.2em;
 }
 
 #desc p {
@@ -194,17 +194,6 @@ nav {
     text-align: center;
 }
 
-#photo {
-    background-image: url("../assets/pacilio-julian.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 425px;
-    height: 425px;
-    filter: drop-shadow(0px 0px 20px#46ceca);
-    /* drop-shadow(offset-x offset-y blur-radius color)*/
-}
-
 /* Section - ABOUT */
 
 #about-me {
@@ -214,6 +203,7 @@ nav {
 
 .button  {
     margin: 2em auto 0;
+    width: 250px;
     display: block;
     font-weight: bold;
     color:#46ceca;
@@ -221,6 +211,7 @@ nav {
     border: 1px solid #46ceca;
     padding: .6em;
     text-align: center;
+    cursor: pointer;
 }
 
 /* Section - SKILLS / PROJECTS */
@@ -413,3 +404,18 @@ a[title="behance"] {
 }
 
 /** Media Queries */
+
+@media screen and (min-width: 768px) {
+    .hero {
+        position: relative;
+        background-image: url("../assets/web_banner.svg");
+        background-repeat: no-repeat;
+        background-size: max(920px);
+        background-position: bottom ;
+    }
+
+    #banner {
+        position: relative;
+        top: 18vh;
+    }
+}
